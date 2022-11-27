@@ -1,6 +1,5 @@
-# Positional-encoding Image Prior (PIP)
-
-## Code example - Full code will be provided soon
+Positional-encoding Image Prior (PIP)
+-------------------------------------
 
 Installation:
 -------------
@@ -23,4 +22,3 @@ Provided demo
 
 If you wish to test on your own image, please add '--input_img_path <path/to/your/image>'
 The output will be saved in the root directory as 'sr_learned_ff.png'
-
