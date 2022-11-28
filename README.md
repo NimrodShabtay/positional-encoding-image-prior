@@ -1,26 +1,38 @@
 # Positional-encoding Image Prior (PIP)
 
-## Code example - Full code will be provided soon
+[Project page](https://nimrodshabtay.github.io/PIP/)
 
-Installation:
+Code for more tasks will be added soon
+
+##Installation
 -------------
 We tested the demo with Python 3.6
-For installation please type
-'pip install -r requirements.txt'
+For installation please run
+```
+pip install -r requirements.txt
+```
 
-Denoising example:
+##Denoising example
 ------------------
-Provided demo
-'python3 denoising.py'
-
-If you wish to test on your own image, please add '--input_img_path <path/to/your/image>'
+Run
+```
+python3 denoising.py
+```
+or for running on your own image
+```
+python3 denoising.py --input_img_path <path/to/your/image>
+```
 The output will be saved in the root directory as 'denoising_fixed_ff.png'
 
-SR example:
+##SR example
 ------------------
-Provided demo
-'python3 SR.py'
-
-If you wish to test on your own image, please add '--input_img_path <path/to/your/image>'
+Run
+```
+python3 SR.py
+```
+or for running on your own image
+```
+python3 SR.py --input_img_path <path/to/your/image>
+```
 The output will be saved in the root directory as 'sr_learned_ff.png'
 
