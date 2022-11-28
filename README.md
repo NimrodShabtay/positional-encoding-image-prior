@@ -1,10 +1,10 @@
 # Positional-encoding Image Prior (PIP)
 
-[Project page](https://nimrodshabtay.github.io/PIP/)
+## [Project page](https://nimrodshabtay.github.io/PIP/)
 
 Code for more tasks will be added soon
 
-##Installation
+## Installation
 -------------
 We tested the demo with Python 3.6
 For installation please run
@@ -12,7 +12,7 @@ For installation please run
 pip install -r requirements.txt
 ```
 
-##Denoising example
+## Denoising example
 ------------------
 Run
 ```
@@ -24,7 +24,7 @@ python3 denoising.py --input_img_path <path/to/your/image>
 ```
 The output will be saved in the root directory as 'denoising_fixed_ff.png'
 
-##SR example
+## SR example
 ------------------
 Run
 ```
