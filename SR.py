@@ -2,6 +2,7 @@ from __future__ import print_function
 from models import *
 import random
 import argparse
+import os
 
 from models.downsampler import Downsampler
 from utils.sr_utils import *
@@ -67,7 +68,7 @@ elif factor == 8:
 else:
     assert False, 'We did not experiment with other factors'
 
-input_depth = 32
+input_depth = freq_dict['n_freqs'] * 4
 net_input = get_input(input_depth, INPUT, (imgs['HR_pil'].size[1], imgs['HR_pil'].size[0]),
                       freq_dict=freq_dict).type(dtype)
 
@@ -159,4 +160,6 @@ plot_image_grid([imgs['HR_np'],
                  imgs['bicubic_np'],
                  out_HR_np], factor=4, nrow=1)
 
-plt.imsave('sr_learned_ff.png', out_HR_np.transpose(1, 2, 0))
+filename = os.path.basename(args.input_img_path).split('.')[0]
+plt.imsave('{}_sr_learned_ff.png'.format(filename), out_HR_np.transpose(1, 2, 0))
+plt.show()

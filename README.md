@@ -22,7 +22,7 @@ or for running on your own image
 ```
 python3 denoising.py --input_img_path <path/to/your/image>
 ```
-The output will be saved in the root directory as 'denoising_fixed_ff.png'
+The output will be saved in the root directory as '<filename>_denoising_fixed_ff.png'
 
 ## SR example
 ------------------
@@ -34,5 +34,17 @@ or for running on your own image
 ```
 python3 SR.py --input_img_path <path/to/your/image>
 ```
-The output will be saved in the root directory as 'sr_learned_ff.png'
+The output will be saved in the root directory as '<filename>_sr_learned_ff.png'
+
+## Inpainting example
+------------------
+Run
+```
+python3 Inpainting.py
+```
+or for running on your own image
+```
+python3 Inpainting.py --input_img_path <path/to/your/image>
+```
+The output will be saved in the root directory as '<filename>_inpainting_learned_ff.png'
 

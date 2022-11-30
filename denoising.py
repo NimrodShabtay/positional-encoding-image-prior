@@ -60,7 +60,6 @@ img_noisy_torch = np_to_torch(img_noisy_np).type(dtype)
 
 if fname in fnames:
     num_iter = 1800
-    input_depth = 32
     figsize = 4
     freq_dict = {
         'method': 'log',
@@ -68,6 +67,7 @@ if fname in fnames:
         'n_freqs': 8,
         'base': 2 ** (8 / (8 - 1)),
     }
+    input_depth = freq_dict['n_freqs'] * 4
 
     net = get_net(input_depth, 'skip', pad, n_channels=output_depth,
                   skip_n33d=128,
@@ -165,5 +165,6 @@ net_input = net_input_saved
 
 out_np = torch_to_np(net(net_input))
 q = plot_image_grid([np.clip(out_np, 0, 1), img_np], factor=13)
+filename = os.path.basename(fname).split('.')[0]
 plt.imsave('denoising_fixed_ff.png', out_np.transpose(1, 2, 0))
-
+plt.show()
