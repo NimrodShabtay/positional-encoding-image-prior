@@ -48,3 +48,13 @@ python3 Inpainting.py --input_img_path <path/to/your/image>
 ```
 The output will be saved in the root directory as ```<filename>_inpainting_learned_ff.png```
 
+##
+If you find our work useful in your research or publication, please cite it:
+```
+@article{shabtay2022pip,
+  title={PIP: Positional-encoding Image Prior},
+  author={Shabtay, Nimrod and Schwartz, Eli and Giryes, Raja},
+  journal={arXiv preprint arXiv:2211.14298},
+  year={2022}
+}
+```
