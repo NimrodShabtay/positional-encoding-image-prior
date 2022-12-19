@@ -271,17 +271,3 @@ def generate_fourier_feature_maps(net_input, spatial_size, dtype=torch.float32, 
     else:
         vp_cat = torch.cat((torch.cos(vp), torch.sin(vp)), dim=-1)
     return vp_cat.flatten(-2, -1).permute(0, 3, 1, 2)
-
-
-def positional_encoding(m, sigma, v, sample_depth=0, scale_factor=1):
-    j = torch.arange(m, device=v.device)
-    if sample_depth > 0:
-        indices = torch.multinomial(torch.arange(0, j.shape[0], dtype=torch.float),
-                                    sample_depth, replacement=False)
-        coeffs = 2 * np.pi * sigma ** (j[indices] / m)
-    else:
-        coeffs = 2 * np.pi * sigma ** (j / m)
-
-    coeffs = coeffs * scale_factor
-
-    return coeffs
