@@ -2,8 +2,6 @@
 
 ## [Project page](https://nimrodshabtay.github.io/PIP/)
 
-Code for more tasks will be added soon
-
 ## Installation
 -------------
 We tested the demo with Python 3.6
