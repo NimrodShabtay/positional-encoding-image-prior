@@ -48,6 +48,13 @@ python3 Inpainting.py --input_img_path <path/to/your/image>
 ```
 The output will be saved in the root directory as ```<filename>_inpainting_learned_ff.png```
 
+## Video Denoising example
+------------------
+Run
+```
+python3  denoising_video.py --input_vid_path <path/to/your/video>
+```
+The outputs will be saved in the `output` directory ```<filename>/*.png``` for images and ```<filename>/psnr.csv``` for psnr (gt) evaluation values.
 ##
 If you find our work useful in your research or publication, please cite it:
 ```
