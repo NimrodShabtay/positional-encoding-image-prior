@@ -71,7 +71,7 @@ def select_frames(input_seq, factor=1):
                                            device=input_seq.device))
     return indices, values
 
-
+# Video processing is heavil based on the code from: https://github.com/Haotianz94/IL_video_inpainting
 class VideoDataset:
     def __init__(self, video_path, input_type, task, crop_shape=None, sigma=25, mode='random', temp_stride=1,
                  num_freqs=8, batch_size=8, arch_mode='2d', train=True, spatial_factor=4):
