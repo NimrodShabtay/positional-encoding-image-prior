@@ -121,12 +121,9 @@ class VideoDataset:
         self.init_batch_list()
         self.init_input()
 
-        if self.train is True:
-            if task == 'temporal_sr':
-                self.sampled_indices, self.degraded_images_vis = select_frames(self.degraded_images, factor=2)
-            else:
-                self.sampled_indices = np.arange(0, self.n_frames)
-            # self.n_frames = self.images.shape[0]
+        if self.train is True:            
+            self.sampled_indices = np.arange(0, self.n_frames)
+            
 
     def get_cropped_video_dims(self):
         return self.crop_height, self.crop_width
@@ -277,11 +274,8 @@ class VideoDataset:
 
         return ret_val
 
-    def get_all_degraded(self, numpy=False):
-        if self.task == 'temporal_sr':
-            degs_imgs = self.degraded_images_vis
-        else:
-            degs_imgs = self.degraded_images
+    def get_all_degraded(self, numpy=False):        
+        degs_imgs = self.degraded_images
         if numpy:
             ret_val = degs_imgs.detach().cpu().numpy()
         else:
